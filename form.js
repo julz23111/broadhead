@@ -11,17 +11,17 @@ export async function sendContactEmail({ name, email, phone, message }) {
   }
 
   const { data, error } = await resend.emails.send({
-    from: 'Broadhead Buddy &lt;james@broadhead-buddy.com&gt;',
+    from: 'Broadhead Buddy <james@broadhead-buddy.com>',
     to: ['james@broadhead-buddy.com'],
     reply_to: email,
     subject: `New Broadhead Buddy inquiry from ${name}`,
     html: `
-      &lt;h2&gt;New Inquiry from Broadhead Buddy site&lt;/h2&gt;
-      &lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; ${name}&lt;/p&gt;
-      &lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; ${email}&lt;/p&gt;
-      ${phone ? `&lt;p&gt;&lt;strong&gt;Phone:&lt;/strong&gt; ${phone}&lt;/p&gt;` : ''}
-      &lt;p&gt;&lt;strong&gt;Message:&lt;/strong&gt;&lt;/p&gt;
-      &lt;p&gt;${message.replace(/\n/g, '&lt;br&gt;')}&lt;/p&gt;
+      <h2>New Inquiry from Broadhead Buddy site</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, '<br>')}</p>
     `,
   });
 

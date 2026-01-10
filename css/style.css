@@ -28,6 +28,18 @@
     z-index: 1000;
   }
   
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .brand-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+  }
+
   header h1 {
     color: #f57c00;
     font-size: 1.8rem;
@@ -179,6 +191,13 @@ footer {
     background: #777676;
     border-top: 1px solid rgba(255, 0, 0, 0.3);
   }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
   /* === Glass Form === */
 .glass-form {
     max-width: 400px;
@@ -194,12 +213,18 @@ footer {
   }
   
   .glass-form input,
-  .glass-form textarea {
+.glass-form textarea {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 0, 0, 0.3);
     color: #fff;
     padding: 0.8rem;
     border-radius: 8px;
+  }
+
+  .glass-form label {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #ccc;
   }
   
   .glass-form input::placeholder,
@@ -510,13 +535,38 @@ footer {
   padding: 0;
   border: none;
   border-radius: 6px;
-  filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.3));
-  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: none;
+  transition: none;
 }
 
 .footer-icon:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 18px rgba(255, 0, 0, 0.6));
+  transform: none;
+  filter: none;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-right img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.footer-right p {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.footer-note {
+  color: #222;
+  font-size: 0.95rem;
 }
 
 .footer-link {
@@ -616,10 +666,193 @@ a{
 .product-3d {
   perspective: 1000px;
   transition: transform 0.15s ease-out;
+  max-width: 420px;
+  margin: 0 auto 1.5rem;
 }
 
 .product-3d img {
   width: 100%;
   display: block;
   transform-style: preserve-3d;
+}
+
+.camo-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+  background-image: url("../assets/images/camo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 1px solid rgba(255, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.archers-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, rgba(10,10,10,0.95), rgba(15,15,15,0.95));
+  text-align: center;
+}
+
+.archers-section h2 {
+  color: #ff2b2b;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.archers-section p {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.engineered-features {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.engineered-features h2 {
+  color: #ff6600;
+  margin-bottom: 2rem;
+}
+
+.engineered-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.engineered-card {
+  padding: 1.5rem;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.engineered-card h3 {
+  color: #ff6600;
+  margin-bottom: 0.5rem;
+}
+
+.engineered-card p {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.difference-section {
+  padding: 4rem 2rem;
+  background: radial-gradient(circle at top, #111, #000);
+  text-align: center;
+}
+
+.difference-section h2 {
+  color: #ff6600;
+  margin-bottom: 1.5rem;
+}
+
+.difference-section ul {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 1.2rem;
+  text-align: left;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.how-steps {
+  padding: 3rem 2rem 4rem;
+  text-align: center;
+}
+
+.how-steps ol {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  display: grid;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.how-steps li {
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.how-steps h3 {
+  color: #ff6600;
+  margin-bottom: 0.25rem;
+  letter-spacing: 1px;
+}
+
+.products-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 2.5rem;
+}
+
+.product-card {
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.product-card h3 {
+  color: #ff6600;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.purchase-check {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.purchase-check input {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.contact-details {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #f2f2f2;
+}
+
+.contact-details a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.form-status {
+  min-height: 1.5rem;
+  font-size: 0.95rem;
+  color: #ff6600;
 }

@@ -9,7 +9,10 @@
 </head>
 <body>
   <header>
-    <h1>BROADHEAD BUDDY</h1>
+    <div class="brand">
+      <img src="assets/icons/bb.png" alt="Broadhead Buddy logo" class="brand-logo" />
+      <h1>Broadhead Buddy</h1>
+    </div>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <span class="bar"></span>
@@ -21,62 +24,38 @@
       <ul id="primary-nav" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="legal.html">Legal</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Gear Up for the Hunt</h2>
-    <p>Select your load-out. Each package includes our lifetime warranty and premium construction.</p>
-    <section class="products">
-      <h3 style="text-align:center; margin: 2rem 0 1rem;">Choose Your Package</h3>
-      <div class="table-wrap">
-        <table class="glass-table" aria-label="Product options for Broadhead Buddy">
-          <thead>
-            <tr>
-              <th>Price</th>
-              <th>Includes</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-  <tr>
-    <td>$129.99</td>
-    <td>Broadhead Buddy Tool</td>
-    <td>
-      <a
-        class="btn"
-        href="https://square.link/u/Wfv8kP6Z"
-        target="_blank"
-        rel="noopener"
-        aria-label="Buy Premium Package via Square"
-      >Buy</a>
-    </td>
-  </tr>
-  <tr>
-    <td>$89.99</td>
-    <td>Broadhead Buddy Tool</td>
-    <td>
-      <a
-        class="btn"
-        href="https://square.link/u/FdsExHAO"
-        target="_blank"
-        rel="noopener"
-        aria-label="Buy Standard Package via Square"
-      >Buy</a>
-    </td>
-  </tr>
-</tbody>
-        </table> 
-        <p style="text-align:center; color:#bbb; margin: 0.75rem 0 2rem;">Checkout handled securely by <strong>Talech</strong></p>
-        <div class="prop65-warning" role="alert">
-          <div class="icon">⚠️</div>
-          <div class="text">
-            <strong>WARNING:</strong> This product can expose you to chemicals including <em>Nickel Acetate</em>, which is known to the State of California to cause cancer. For more information go to <a href="https://www.p65warnings.ca.gov" target="_blank" rel="noopener">www.P65Warnings.ca.gov</a>.
-          </div>
-     
+    <h2>Gear Up!</h2>
+    <p>Includes a 1 Year Manufacturing Defect Warranty.</p>
+    <section class="products" aria-label="Broadhead Buddy products">
+      <div class="products-grid">
+        <article class="product-card">
+          <img src="image.png" alt="Broadhead Buddy product" />
+          <h3>Broadhead Buddy™</h3>
+          <p>The Broadhead Buddy extraction tool is specifically engineered for the task and designed for durability, performance, and reliability.</p>
+          <button class="btn btn-disabled" type="button" data-purchase-link data-href="https://square.link/u/Wfv8kP6Z" disabled aria-disabled="true">Buy</button>
+        </article>
+        <article class="product-card">
+          <img src="image.png" alt="Imperfect Buddy product" />
+          <h3>Imperfect Buddy</h3>
+          <p>The Broadhead Buddy extraction tool is specifically engineered for the task and designed for durability, performance, and reliability.</p>
+          <button class="btn btn-disabled" type="button" data-purchase-link data-href="https://square.link/u/FdsExHAO" disabled aria-disabled="true">Buy</button>
+        </article>
+      </div>
+      <div class="purchase-check">
+        <input id="purchase-check" type="checkbox" required />
+        <label for="purchase-check">I have read the notice above.</label>
+      </div>
+      <p class="features-intro">To complete your purchase, you will be redirected to Square’s secure payment process checkout.</p>
     </section>
   </section>
 
@@ -85,7 +64,22 @@
 
 
   <footer>
-    <p>© 2025 Broadhead Buddy | Tactical Series</p>
+    <div class="footer-content">
+      <div class="footer-icons">
+        <img src="assets/icons/bb.png" alt="JEBCO Logo" class="footer-icon" />
+        <img src="assets/icons/vet.png" alt="Washington Certified Veteran Owned Logo" class="footer-icon" />
+        <img src="assets/icons/vet.png" alt="Service Disabled Veteran Owned Logo" class="footer-icon" />
+      </div>
+      <p class="footer-note">© 2025 Broadhead Buddy | Superior Extraction | Premium Construction</p>
+      <div class="footer-right">
+        <a href="https://facebook.com/profile.php?id=61581792676686" target="_blank"><img src="assets/nbg-f.png" alt="Facebook"></a>
+        <a href="https://x.com/@broadhead_buddy" target="_blank"><img src="assets/nbg-x.png" alt="X"></a>
+        <a href="https://www.instagram.com/broadhead_buddy" target="_blank"><img src="assets/nbg-inst.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/@broadhead_buddy" target="_blank"><img src="assets/nbg-yt.png" alt="YouTube"></a>
+        <a href="https://www.tiktok.com/@broadhead_buddy" target="_blank"><img src="assets/nbg-tt.png" alt="TikTok"></a>
+        <p>@Broadhead_Buddy</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

@@ -6,10 +6,14 @@
   <title>About | Broadhead Buddy</title>
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/script.js"></script>
+  <script defer src="js/tilt.js"></script>
 </head>
 <body>
   <header>
-    <h1>BROADHEAD BUDDY</h1>
+    <div class="brand">
+      <img src="assets/icons/bb.png" alt="Broadhead Buddy logo" class="brand-logo" />
+      <h1>Broadhead Buddy</h1>
+    </div>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <span class="bar"></span>
@@ -21,91 +25,92 @@
       <ul id="primary-nav" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="legal.html">Legal</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
+    <div class="product-3d">
+      <img src="assets/images/product-1.png" alt="Broadhead Buddy 360 view" class="product-image" />
+    </div>
     <h2>Features &amp; Benefits</h2>
     <p>Everything you need in the field—engineered for speed, safety, and reliability.</p>
   </section>
 
-  <section class="features" aria-labelledby="features-title">
-    <h2 id="features-title">What makes Broadhead Buddy different</h2>
-    <p class="features-intro">Purpose-built for hunters who demand fast extraction, safe handling, and gear that won’t fail when it matters.</p>
+  <section class="archers-section">
+    <h2>Built for Archers, by Archers</h2>
+    <p>
+      Designed by an archer who knows the frustration of a missed shot and a stuck broadhead. Whether you're bowhunting or target shooting, the Broadhead Buddy™ is purpose-built to remove embedded broadheads safely and efficiently. No more using your arrow for leverage, prying with pliers, or chiseling around blades to free the head. These risky methods can break arrow shafts, bend ferrules, or chip blades. Broadhead Buddy™ eliminates the damage and gets your broadhead back.
+    </p>
+    <p>
+      The Broadhead Buddy™ is built to last and engineered for serious performance. Order yours below or ask your local pro shop to carry it.
+    </p>
+  </section>
 
-    <div class="features-grid">
-      <article class="feature-card">
-        <h3>One‑Twist Extraction</h3>
-        <p>Pull stuck broadheads quickly without tearing targets, foam, or truck liners.</p>
-        <ul class="bullets">
-          <li>Low-torque twist removes most heads in seconds</li>
-          <li>Protects targets and broadhead edges</li>
-        </ul>
+  <section class="engineered-features">
+    <h2>Engineered Features &amp; Benefits</h2>
+    <div class="engineered-grid">
+      <article class="engineered-card">
+        <h3>Precision CNC Machining</h3>
+        <p>Each tool is meticulously machined from a single billet of 304 stainless steel and 6061 aluminums, eliminating weak points and ensuring perfect function every time.</p>
       </article>
-
-      <article class="feature-card">
-        <h3>Broadhead‑Safe Grip</h3>
-        <p>Secure clamping profile designed to avoid blade damage during removal.</p>
-        <ul class="bullets">
-          <li>No-crush contact surfaces</li>
-          <li>Maintains edge integrity for re-use</li>
-        </ul>
+      <article class="engineered-card">
+        <h3>Mechanical Advantage</h3>
+        <p>Uses controlled positive axial force multiplication. By applying a relatively small force to the knob the Broadhead Buddy generates a very large linear pulling force, allowing you to easily extract deeply embedded broadheads from even the densest objects.</p>
       </article>
-
-      <article class="feature-card">
-        <h3>Field‑Ready Steel</h3>
-        <p>Rugged, heat‑treated steel built to perform in mud, rain, and cold.</p>
-        <ul class="bullets">
-          <li>Corrosion‑resistant finish</li>
-          <li>Rated for repeated heavy use</li>
-        </ul>
+      <article class="engineered-card">
+        <h3>Multi-Functionality</h3>
+        <p>This isn't a one-trick pony. Broadhead Buddy is compatible with most fixed and mechanical 2,3 and 4 blade Broadheads; works on field points too. It can also save your expensive arrow shaft inserts. Don’t grab and damage the insert with pilers, this prevents them from fitting in the arrow correctly and true again. Instead use the included piece of all-thread rod. Thread it into the back of the insert and pull it like you would a broadhead.</p>
       </article>
-
-      <article class="feature-card">
-        <h3>Compact &amp; Lightweight</h3>
-        <p>Small enough for a bino harness or pocket—always on you when needed.</p>
-        <ul class="bullets">
-          <li>Pocketable footprint</li>
-          <li>Balanced weight for control</li>
-        </ul>
+      <article class="engineered-card">
+        <h3>Durability and Performance</h3>
+        <p>Every detail is engineered for uncompromising performance and maximum longevity. Premium constructed stainless steel and aluminum make it corrosion resistant and far superior molded alternatives.</p>
       </article>
-
-      <article class="feature-card">
-        <h3>Glove‑Grip Handle</h3>
-        <p>Textured geometry stays grippy with gloves, wet hands, or winter temps.</p>
-        <ul class="bullets">
-          <li>High‑traction surface pattern</li>
-          <li>Comfortable under load</li>
-        </ul>
-      </article>
-
-      <article class="feature-card">
-        <h3>Universal Fit</h3>
-        <p>Works with common broadhead shapes and materials used in the field.</p>
-        <ul class="bullets">
-          <li>Compatible with popular brands</li>
-          <li>No special adapters required</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="features-cta">
-      <a href="shop.html" class="btn">Get the Broadhead Buddy</a>
-      <p class="cta-note">Built for the field. Ready when you are.</p>
     </div>
   </section>
 
-  <aside class="spike-display">
-    <div class="image-card">
-      <img src="assets/images/spike.png" alt="Broadhead Spike Display" />
-    </div>
-  </aside>
+  <section class="difference-section">
+    <h2>What Makes Broadhead Buddy Different</h2>
+    <ul>
+      <li>Low-torque twist removes most heads in seconds</li>
+      <li>Protects targets and broadhead edges</li>
+      <li>No-crush contact surfaces</li>
+      <li>Maintains edge integrity for re-use</li>
+      <li>Corrosion-resistant finish</li>
+      <li>Rated for repeated heavy use</li>
+      <li>Pocketable footprint</li>
+      <li>Balanced weight for control</li>
+      <li>High-traction surface pattern</li>
+      <li>Comfortable under load</li>
+      <li>Compatible with popular brands</li>
+      <li>No special adapters required</li>
+    </ul>
+  </section>
+
+  <section class="camo-display" aria-label="Camo pattern divider"></section>
 
   <footer>
-    <p>© 2025 Broadhead Buddy | Mission First</p>
+    <div class="footer-content">
+      <div class="footer-icons">
+        <img src="assets/icons/bb.png" alt="JEBCO Logo" class="footer-icon" />
+        <img src="assets/icons/vet.png" alt="Washington Certified Veteran Owned Logo" class="footer-icon" />
+        <img src="assets/icons/vet.png" alt="Service Disabled Veteran Owned Logo" class="footer-icon" />
+      </div>
+      <p class="footer-note">© 2025 Broadhead Buddy | Superior Extraction | Premium Construction</p>
+      <div class="footer-right">
+        <a href="https://facebook.com/profile.php?id=61581792676686" target="_blank"><img src="assets/nbg-f.png" alt="Facebook"></a>
+        <a href="https://x.com/@broadhead_buddy" target="_blank"><img src="assets/nbg-x.png" alt="X"></a>
+        <a href="https://www.instagram.com/broadhead_buddy" target="_blank"><img src="assets/nbg-inst.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/@broadhead_buddy" target="_blank"><img src="assets/nbg-yt.png" alt="YouTube"></a>
+        <a href="https://www.tiktok.com/@broadhead_buddy" target="_blank"><img src="assets/nbg-tt.png" alt="TikTok"></a>
+        <p>@Broadhead_Buddy</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

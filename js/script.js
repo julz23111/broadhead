@@ -33,4 +33,83 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("open");
     });
   });
+
+  const purchaseCheck = document.querySelector("#purchase-check");
+  if (purchaseCheck) {
+    const buyButtons = document.querySelectorAll("[data-purchase-link]");
+    const toggleButtons = () => {
+      buyButtons.forEach((button) => {
+        if (purchaseCheck.checked) {
+          button.removeAttribute("disabled");
+          button.setAttribute("aria-disabled", "false");
+          button.classList.remove("btn-disabled");
+        } else {
+          button.setAttribute("disabled", "disabled");
+          button.setAttribute("aria-disabled", "true");
+          button.classList.add("btn-disabled");
+        }
+      });
+    };
+
+    purchaseCheck.addEventListener("change", toggleButtons);
+    toggleButtons();
+
+    buyButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button.hasAttribute("disabled")) return;
+        const link = button.getAttribute("data-href");
+        if (link) {
+          window.open(link, "_blank", "noopener");
+        }
+      });
+    });
+  }
+
+  const contactForm = document.querySelector("#contact-form");
+  if (contactForm) {
+    const status = document.querySelector("#form-status");
+    const timestampField = document.querySelector("#form-start");
+
+    if (timestampField) {
+      timestampField.value = Date.now().toString();
+    }
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      if (status) {
+        status.textContent = "Sending your message...";
+      }
+
+      try {
+        const response = await fetch("/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error("Request failed");
+        }
+
+        contactForm.reset();
+        if (timestampField) {
+          timestampField.value = Date.now().toString();
+        }
+
+        if (status) {
+          status.textContent = "Thanks! Your message has been sent.";
+        }
+      } catch (error) {
+        if (status) {
+          status.textContent = "Sorry, something went wrong. Please try again.";
+        }
+      }
+    });
+  }
 });
